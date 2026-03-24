@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Stylish Outline Text for Light Mode */
+.outline-text-light {
+  -webkit-text-stroke: 1px #e2e8f0;
+  color: transparent;
+}
+
+/* Stylish Outline Text for Dark Mode */
+.outline-text-dark {
+  -webkit-text-stroke: 1px #1e293b;
+  color: transparent;
+}
+
+/* Ensure the marquee container is ultra-smooth */
+.animate-marquee {
+  display: flex;
+  width: max-content;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-infinite {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+/* Stylish Outline Text Effect */
+.outline-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgba(59, 130, 246, 0.5); /* Blue-500 with opacity */
+}
+
+.dark .outline-text {
+  -webkit-text-stroke: 1px rgba(30, 41, 59, 0.8); /* Dark Slate */
+}
+
+/* Prevents scrollbar from appearing during animation */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
